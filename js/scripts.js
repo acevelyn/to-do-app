@@ -11,5 +11,9 @@ if (inputValue === ''){
   let list = $('#list');
   list.append(li);
 }
+function crossOut(){
+  li.addClass('strike');
+}
+li.on('dblclick', crossOut);
 
 }
