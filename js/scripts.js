@@ -16,4 +16,14 @@ function crossOut(){
 }
 li.on('dblclick', crossOut);
 
+let crossOutButton = $(document.createElement('crossOutButton'));
+crossOutButton.append(document.createTextNode('X'));
+li.append(crossOutButton);
+
+crossOutButton.on('click', deleteListItem);
+
+function deleteListItem(){
+  li.addClass('delete');
+}
+
 }
